@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title><%= config.title %></title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="<%= bundleCss %>">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noimageindex">
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" sizes="192x192" href="/img/logo.png" />
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="<%= bundle %>"></script>
+    <%_ if (!debug && config.trackingID) { _%>
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','<%= config.trackingID %>','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <%_ } _%>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js', {
+          scope: './'
+        }).then(function(registration) {
+          registration.onupdatefound = function() {
+            if (navigator.serviceWorker.controller) {
+              const installingWorker = registration.installing;
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    break;
+                  case 'redundant':
+                    throw new Error('The installing ' +
+                      'service worker became redundant.');
+                  default:
+                  // Ignore
+                }
+              };
+            }
+          };
+        }).catch(function(e) {
+          console.error('Error during service worker registration:', e);
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
+    <noscript>Your browser does not support JavaScript!</noscript>
+  </body>
+</html>

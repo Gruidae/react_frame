@@ -1,0 +1,51 @@
+@import '../default.less';
+
+.mainContainer {
+  padding: 24px 16px;
+  width: 100%;
+}
+
+.sider {
+  height: 100%;
+  padding-bottom: 24px;
+  transition: all .3s ease;
+  border-right: 1px solid #e9e9e9;
+}
+
+.sider :global(.ant-menu) {
+  margin-bottom: 20px;
+  border-right: 0;
+}
+
+.sider :global(.ant-menu) > :global(.ant-menu-item) {
+  margin: 16px 0;
+}
+
+.sider :global(.ant-menu) > :global(.ant-menu-item) .navText {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.sider :global(.ant-menu) > :global(.ant-menu-item) :global(.anticon) {
+  transition: font-size .3s;
+}
+
+.main {
+  /* background: #2db7f5; */
+  transition: all .3s ease;
+}
+
+.navTabs {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 100px;
+  }
+  .mainContainer {
+    padding-top: 0;
+  }
+}

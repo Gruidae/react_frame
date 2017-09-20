@@ -1,0 +1,56 @@
+@import 'default.less';
+
+:global(body) {
+  font-size: @font-size-base-hmb;
+}
+
+:global(h1) {
+  font-weight: 600;
+  font-size: @font-size-lg-hmb;
+}
+
+:global(h2) {
+  font-weight: 600;
+  font-size: @font-size-lg-hmb - 2px;
+}
+
+:global(h3) {
+  font-weight: 600;
+  font-size: @font-size-base-hmb;
+}
+
+:global(.am-popover-item-content) {
+  height: .84rem;
+  display: block;
+  line-height: .84rem;
+  width: 100%;
+  a {
+    height: .84rem;
+    display: block;
+    line-height: .84rem;
+    width: 100%;
+  }
+}
+
+:global(button.btn-huge) {
+  padding: 20px 75px;
+  border-radius: 10px;
+  font-size: @font-size-lg-hmb;
+}
+
+// Check https://github.com/ant-design/ant-design/blob/master/components/spin/style/index.less
+:global(.ant-spin-blur) {
+  opacity: .8;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  filter: ~'progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false)'; /* IE6~IE9 */
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+  }
+}

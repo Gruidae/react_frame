@@ -1,0 +1,57 @@
+#container {
+  background-color: #ececec;
+}
+
+html {
+  font-size: 50px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  html {
+    font-size: 44px !important;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  html {
+    font-size: 47px !important;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  html {
+    font-size: 50px !important;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  html {
+    font-size: 50px !important;
+  }
+}
+
+body {
+  user-select: text !important;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #b3b3b3 !important;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #b3b3b3 !important;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #b3b3b3 !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #b3b3b3 !important;
+}

@@ -1,0 +1,145 @@
+@import '../default.less';
+
+.colButton {
+  display: flex;
+  justify-content: center;
+}
+
+.productTitle {
+  text-align: center;
+  margin: 60px auto 40px;
+}
+
+.sectionTitleMargin {
+  margin-bottom: 30px;
+}
+
+.labelMargin {
+  & > div {
+    margin-bottom: 30px;
+  }
+}
+
+.labelCenter {
+  // 需要设置成居中
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.detailInput {
+  width: 100%;
+}
+
+form .detailInputSelect {
+  width: 100px;
+}
+
+form .detailSelect {
+  width: 100%;
+}
+
+.createButton {
+  width: 300px;
+  margin-bottom: 30px;
+  font-size: @font-size-lg-hmb;
+}
+
+.container {
+  margin-left: 30px;
+  margin-right: 30px;
+  & label {
+    font-size: @font-size-base-hmb;
+  }
+}
+
+.breadcrumb {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.formItem {
+  & > div {
+    text-align: right;
+    min-width: 300px;
+  }
+}
+
+.formLabel {
+  & > div {
+    text-align: right;
+    min-width: 300px;
+  }
+}
+
+.formTextAreaItem {
+  & > div {
+    text-align: right;
+    min-width: 300px;
+  }
+}
+
+.form {
+  width: 100%;
+}
+
+.formLabel .labelInput[disabled] {
+  border: 0;
+  border-radius: 0;
+  background-color: @body-background;
+  color: @text-color;
+  width: 100%;
+  font-size: @font-size-base-hmb;
+  text-align: left;
+  resize: none;
+  margin-top: 4px;
+}
+
+.formLongLabel {
+  & > div {
+    text-align: right;
+    min-width: 300px;
+  }
+}
+
+.formLongLabel .longLabelInput[disabled] {
+  border: 0;
+  border-radius: 0;
+  background-color: @body-background;
+  color: @text-color;
+  width: 100%;
+  font-size: @font-size-base-hmb;
+  text-align: left;
+  resize: none;
+  margin-top: 4px;
+}
+
+.submitMargin {
+  margin-top: 30px;
+}
+
+:global(.ant-calendar-picker) {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .formItem {
+    & > div {
+      text-align: left;
+    }
+  }
+
+  .formTextAreaItem {
+    & > div {
+      text-align: left;
+    }
+  }
+
+  .formLabel {
+    & > div {
+      text-align: left;
+      min-width: 180px;
+    }
+  }
+}

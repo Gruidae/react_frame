@@ -1,0 +1,21 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "no-invalid-double-slash-comments": null,
+    "number-leading-zero": "never",
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          ":local",
+          ":global",
+          "global",
+          "local"
+        ]
+      }
+    ],
+    "string-quotes": "single",
+    "selector-pseudo-element-colon-notation": "single",
+    "unit-case": null
+  }
+}

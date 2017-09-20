@@ -1,0 +1,43 @@
+@import '../default.less';
+@import '../case/SubmitForm.less';
+
+.colButton {
+  display: flex;
+  justify-content: center;
+}
+
+.labelSpan {
+  margin-left: 300px;
+}
+
+.labelMargin {
+  & > div {
+    margin-bottom: 30px;
+    margin-left: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .createButton {
+    margin-right: 150px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .createButton {
+    margin-right: 180px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+  .formLongLabel {
+    & > div {
+      text-align: left;
+    }
+  }
+
+  .formLongLabel .longLabelInput[disabled] {
+    padding: 0;
+  }
+}

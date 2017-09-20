@@ -1,0 +1,52 @@
+@import '../default.less';
+
+.contentBox {
+  width: 100%;
+  padding: 24px;
+  margin: 48px 0;
+  cursor: pointer;
+  .titleSection {
+    padding-bottom: @padding-vertical-lg;
+    .title {
+      font-weight: 600;
+      font-size: @font-size-base-hmb;
+      align-self: center;
+      color: @text-color;
+    }
+  }
+  .no {
+    color: @text-color-secondary;
+    padding-bottom: @padding-vertical-lg;
+  }
+  .content {
+    color: @text-color-secondary;
+    margin-top: @padding-vertical-lg;
+    a {
+      color: @text-color !important;
+      i {
+        font-size: 24px;
+        transition: all .3s cubic-bezier(.18, .89, .32, 1.28);
+      }
+      &:hover {
+        transform: rotate(15deg);
+      }
+      &:active {
+        transform: rotate(15deg);
+      }
+    }
+  }
+}
+
+.contentLabel {
+  padding: @padding-vertical-lg;
+  margin-top: @padding-vertical-lg;
+  height: 72PX;
+  width: 100%;
+  color: @text-color;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

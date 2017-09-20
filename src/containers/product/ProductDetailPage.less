@@ -1,0 +1,82 @@
+@import '../default.less';
+
+.detailTitle {
+  text-align: center;
+  margin: 60px  auto;
+  font-size: @font-size-lg-hmb;
+  & > div {
+    margin: -3px 24px 0;
+  }
+}
+
+.detailContent .detailTitle {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.detailSubTitle {
+  margin: 0 0 60px;
+}
+
+.detailContent .contentBox {
+  margin-bottom: 120px;
+}
+
+.detailContent {
+  border: solid 2px #e9e9e9;
+  width: 100%;
+  padding: 48px;
+  margin-top: 48px;
+}
+
+.contentItemBox {
+  margin: 24px auto;
+}
+
+.contentItemBox > div {
+  margin-bottom: 48px;
+}
+
+.totalPrice {
+  font-weight: 600;
+}
+
+.stepBox {
+  padding-bottom: 48px;
+}
+
+.partContainer {
+  padding: 0 auto 16px 0;
+  border-bottom: 1px #ececec solid;
+}
+
+.btnLayer {
+  margin-bottom: 32px;
+  &  button {
+    margin-right: 32px;
+  }
+}
+
+.btnMessage {
+  padding: 32px 32px 64px;
+}
+
+.icon {
+  margin-top: 6px;
+  font-size: @default-icon-size;
+  transition: all .3s cubic-bezier(.18, .89, .32, 1.28);
+  cursor: pointer;
+  &:hover {
+    transform: scale(2);
+  }
+  &:active {
+    transform: scale(2);
+  }
+}
+
+.attachItem {
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

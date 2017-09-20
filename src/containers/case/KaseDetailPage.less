@@ -1,0 +1,21 @@
+@import '../product/ProductDetailPage.less';
+
+.productBox {
+  margin: 24px 0;
+  border-bottom: 1px solid @default-border-color;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.attachLayer {
+  margin-bottom: 24px;
+}
+
+.contentBox {
+  :global(.ant-collapse) {
+    border: none;
+    border-bottom: 1px solid @default-border-color;
+    border-radius: 0;
+  }
+}

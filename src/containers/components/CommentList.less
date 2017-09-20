@@ -1,0 +1,117 @@
+@import '../default.less';
+
+.messageModal {
+  max-height: 95%;
+  :global(.ant-modal),
+  :global(.ant-modal-content) {
+    max-height: 100%;
+  }
+  :global(.ant-modal) {
+    top: 80px;
+  }
+  :global(.ant-modal-footer) {
+    display: none;
+  }
+  .messageList {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 900px;
+    min-height: 600px;
+  }
+  .modalBtnLayer {
+    margin-top: 24px;
+  }
+}
+
+.messageBox {
+  padding: 24px 0;
+  border-bottom: 1px dashed @default-border-color;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border: none;
+  }
+  .container {
+    margin-left: 92px;
+  }
+  .header {
+    .handler_btns,
+    .timestamp {
+      font-size: 24px;
+      text-align: right;
+      color: #a6a6a6;
+      padding-right: 8px;
+    }
+    .handler_btns {
+      cursor: pointer;
+      color: @primary-color;
+    }
+  }
+  .content {
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .avatar {
+    img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+    }
+    width: 92px;
+    float: left;
+  }
+}
+
+.formNoMsg {
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+.btnNoMsg {
+  margin-top: 24px;
+}
+
+.msgLabel {
+  min-width: 120px;
+  word-break: break-all !important;
+  white-space: pre-line !important;
+}
+
+.icon {
+  margin-top: 6px;
+  font-size: @default-icon-size;
+  transition: all .3s cubic-bezier(.18, .89, .32, 1.28);
+  cursor: pointer;
+  &:hover {
+    transform: scale(2);
+  }
+  &:active {
+    transform: scale(2);
+  }
+}
+
+.attachs {
+  margin-top: 24px;
+}
+
+.textArea {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed @default-border-color;
+  & > form > div {
+    margin-bottom: 12px;
+  }
+  .submitTips {
+    color: #a6a6a6;
+  }
+}
+
+.small {
+  width: 200px !important;
+  font-size: 26px !important;
+  border-radius: 0 !important;
+  padding: 1px 7px;
+}
